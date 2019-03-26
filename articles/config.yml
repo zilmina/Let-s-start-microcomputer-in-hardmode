@@ -25,7 +25,7 @@ language: ja
 booktitle: {name: "マイコンをハードモードで始めよう！", file-as: "マイコンをハードモードで始めよう！"}
 
 # 著者名。「, 」で区切って複数指定できる
-aut: [{name: "RXマイコン編", file-as: "rxマイコンヘン"}]
+aut: [{name: "Hiro", file-as: "hiro"}]
 
 # 以下はオプション
 # 以下はオプション(autと同じように配列書式で複数指定可能)。
@@ -56,7 +56,7 @@ edt: ["Hiro"]
 # a-oth, oth: その他
 # a-pht, pht: 撮影責任者
 # a-pbl, pbl: 出版社（発行所）
-pbl: MileStone
+pbl: Mile Stone
 # a-prt, prt: 印刷所
 # prt: TechBooster
 # a-red, red: 項目の枠組起草者
@@ -75,7 +75,7 @@ date: 2019-4-14
 history: [["2019-4-14 技術書典6版 v1.0.0"]]
 # 権利表記(配列で複数指定可)
 # rights: (C) 2016 Re:VIEW Developers
-rights: (C) 2017-2019 MileStone
+rights: (C) 2017-2019 Mile Stone
 # description: 説明
 # subject: 短い説明用タグ(配列で複数指定可)
 # type: 書籍のカテゴリーなど(配列で複数指定可)
