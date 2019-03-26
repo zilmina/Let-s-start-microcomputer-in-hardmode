@@ -5,7 +5,6 @@
 # このファイルはUTF-8エンコーディングで記述してください。
 
 # この設定ファイルでサポートするRe:VIEWのバージョン番号。
-# major versionが違うときにはエラーを出す。
 review_version: 3.0
 
 # ほかの設定ファイルの継承を指定できる。同じパラメータに異なる値がある場合は、
@@ -17,15 +16,17 @@ review_version: 3.0
 # inherit: ["A.yml", "B.yml"]
 
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
-bookname: Let-s-start-microcomputer-in-hardmode
+bookname: book
 # 記述言語。省略した場合はja
 language: ja
 
 # 書名
-booktitle: {name: "マイコンをハードモードで始めよう！", file-as: "マイコンをハードモードで始めよう！"}
+# 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
+booktitle: Re:VIEWサンプル書籍
 
 # 著者名。「, 」で区切って複数指定できる
-aut: [{name: "RXマイコン編", file-as: "rxマイコンヘン"}]
+# 読みを入れる例 aut: [{name: "青木峰郎", file-as: "アオキミネロウ"}, {name: "武藤健志", file-as: "ムトウケンシ"}, {name: "高橋征義", file-as: "タカハシマサヨシ"}, {name: "角征典", file-as: "カドマサノリ"}]
+aut: ["青木峰郎", "武藤健志", "高橋征義", "角征典"]
 
 # 以下はオプション
 # 以下はオプション(autと同じように配列書式で複数指定可能)。
@@ -47,7 +48,6 @@ aut: [{name: "RXマイコン編", file-as: "rxマイコンヘン"}]
 # a-csl, csl: 監修者
 # a-dsr, dsr: デザイナ
 # a-edt, edt: 編集者
-edt: ["Hiro"]
 # a-ill, ill: イラストレータ
 # a-lyr, lyr: 歌詞作成者
 # a-mdc, mdc: メタデータセットの一次的責任者
@@ -56,9 +56,7 @@ edt: ["Hiro"]
 # a-oth, oth: その他
 # a-pht, pht: 撮影責任者
 # a-pbl, pbl: 出版社（発行所）
-pbl: MileStone
 # a-prt, prt: 印刷所
-# prt: TechBooster
 # a-red, red: 項目の枠組起草者
 # a-rev, rev: 評論者
 # a-spn, spn: 援助者
@@ -67,15 +65,14 @@ pbl: MileStone
 # a-trl, trl: 翻訳者
 
 # 刊行日(省略した場合は実行時の日付)
-date: 2019-4-14
+date: 2019-03-26
 # 発行年月。YYYY-MM-DD形式による配列指定。省略した場合はdateを使用する
 # 複数指定する場合は次のように記述する
 # [["初版第1刷の日付", "初版第2刷の日付"], ["第2版第1刷の日付"]]
 # 日付の後ろを空白文字で区切り、任意の文字列を置くことも可能。
-history: [["2019-4-14 技術書典6版 v1.0.0"]]
+history: [["2019-03-26"]]
 # 権利表記(配列で複数指定可)
-# rights: (C) 2016 Re:VIEW Developers
-rights: (C) 2017-2019 MileStone
+# rights: (C) 2016-2019 Re:VIEW Developers
 # description: 説明
 # subject: 短い説明用タグ(配列で複数指定可)
 # type: 書籍のカテゴリーなど(配列で複数指定可)
@@ -87,23 +84,23 @@ rights: (C) 2017-2019 MileStone
 # デバッグフラグ。nullでないときには一時ファイルをカレントディレクトリに作成し、削除もしない
 debug: null
 
-# 固有IDに使用するドメイン。省略した場合は時刻に基づくランダムUUIDが入る
-urnid: urn:uid:https://github.com/TechBooster/ReVIEW-Template
+# 固有IDに使用するドメイン。指定しない場合には、時刻に基づくランダムUUIDが入る
+# urnid: urn:uid:http://example.com/book-title/
 #
 # ISBN。省略した場合はurnidが入る
 # isbn: null
 #
 # HTMLファイルの拡張子(省略した場合はhtml)
-htmlext: html
+# htmlext: html
 #
-# CSSファイル(配列で複数指定可、yamlファイルおよびRe:VIEWファイルを置いたディレクトリにあること)
+# CSSファイル(配列で複数指定可)
 stylesheet: ["style.css"]
 
 # ePUBのバージョン (2か3)
-epubversion: 3
+# epubversion: 3
 #
 # HTMLのバージョン (4か5。epubversionを3にしたときには5にする)
-htmlversion: 5
+# htmlversion: 5
 
 # 目次として抽出する見出しレベル
 toclevel: 3
@@ -111,23 +108,24 @@ toclevel: 3
 # 採番の設定。採番させたくない見出しには「==[nonum]」のようにnonum指定をする
 #
 # 本文でセクション番号を表示する見出しレベル
-secnolevel: 3
+secnolevel: 2
 
 # 本文中に目次ページを作成するか。省略した場合はnull (作成しない)
-toc: true
+# toc: true
 
 # EPUB2標準の目次(NCX)以外に物理目次ファイルを作成するか。省略した場合はnull (作成しない)
 # ePUB3においてはこの設定によらず必ず作成される
 # mytoc: true
 
-# 表紙にするHTMLファイル。ファイル名を指定すると表紙として入る
+# 表紙にするファイル。ファイル名を指定すると表紙として入る (PDFMaker向けにはLaTeXソース断片、EPUBMaker向けにはHTMLファイル)
 # cover: null
 #
 # 表紙に配置し、書籍の影絵にも利用する画像ファイル。省略した場合はnull (画像を使わない)。画像ディレクトリ内に置いてもディレクトリ名は不要(例: cover.jpg)
-# coverimage: cover.png
+# PDFMaker 固有の表紙設定は pdfmaker セクション内で上書き可能
+coverimage: cover.jpg
 #
-# 表紙の後に大扉ページを作成するか。省略した場合はnull (作成しない)
-titlepage: true
+# 表紙の後に大扉ページを作成するか。省略した場合はtrue (作成する)
+# titlepage: true
 #
 # 自動生成される大扉ページを上書きするファイル。ファイル名を指定すると大扉として入る (PDFMaker向けにはLaTeXソース断片、EPUBMaker向けにはHTMLファイル)
 # titlefile: null
@@ -139,7 +137,7 @@ titlepage: true
 # creditfile: null
 
 # 奥付を作成するか。デフォルトでは作成されない。trueを指定するとデフォルトの奥付、ファイル名を指定するとそれがcolophon.htmlとしてコピーされる
-colophon: true
+# colophon: null
 
 # 裏表紙データファイル (PDFMaker向けにはLaTeXソース断片、EPUBMaker向けにはHTMLファイル)
 # backcover: null
@@ -179,11 +177,11 @@ colophon: true
 # words_file: words.csv
 
 # review-vol向けのヒント情報
-# 1ページの行数文字数と1kbごとのページ数を用紙サイズで指定する(A5 or B5)。
+# 1ページの行数文字数と1kbごとのページ数を用紙サイズで指定する(A5 or B5)
 # page_metric: A5
 #
 # あるいは、配列で指定することもできる
-# 各数字の意味は、順にリストの行数、リストの1行字数、テキストの行数、テキストの1行字数、1kバイト毎のページ数
+# 各数字の意味は、順にリストの行数、リストの1行字数、テキストの行数、テキストの1行字数、1kバイトごとのページ数
 # page_metric: [40,80,40,80,2]
 
 # EPUBおよびWeb生成における数式の画像化指定
@@ -223,7 +221,7 @@ colophon: true
   # dvipng_cmd: "dvipng -T tight -z 9 -p %p -l %p -o %o %i"
 
 # EPUBにおけるページ送りの送り方向、page-progression-directionの値("ltr"|"rtl"|"default")
-direction: "ltr"
+# direction: "ltr"
 
 # EPUBのOPFへの固有の追加ルール
 # <package>要素に追加する名前空間
@@ -241,7 +239,6 @@ direction: "ltr"
 epubmaker:
   # HTMLファイルの拡張子
   htmlext: xhtml
-  stylesheet: ["style.css","epub_style.css"]
   #
   # 目次を要素の階層表現にしない。省略した場合(null)は階層化する。
   # 特に部扉が入るなどの理由で、構成によっては階層化目次でepubcheckに
@@ -253,8 +250,8 @@ epubmaker:
   #
   # NCX目次の見出しレベルごとの飾り(配列で設定)。EPUB3ではNCXは作られない
   # ncxindent:
-  #-
-  #- -
+  #- 
+  #- - 
   # フックは、各段階で介入したいときのプログラムを指定する。自動で適切な引数が渡される
   # プログラムには実行権限が必要
   # ファイル変換処理の前に実行するプログラム。スタイルシートのコンパイルをしたいときなどに利用する。
@@ -309,6 +306,8 @@ epubmaker:
   # @<href>タグでの外部リンクを禁止し、地の文にする(falseで禁止する)
   # externallink: true
   #
+  # 脚注に「戻る」リンクを追加する(trueで追加)。脚注の記号および戻るリンクの記号はlocale.ymlで変更可能
+  # back_footnote: null
   # epubmaker:階層を使うものはここまで
 
 # LaTeX用のスタイルファイル(styディレクトリ以下に置くこと)
@@ -316,18 +315,8 @@ texstyle: ["reviewmacro"]
 #
 # LaTeX用のdocumentclassを指定する
 # オプションについてはsty/README.mdを参照
-# デフォルトは印刷用。電子配布版を作るには media=ebook のほうを使う
-# serial_pagination=trueはアラビア数字通し
-# hiddenfolio=nikko-pcは日光企画向けのノドへの隠しノンブル配置
-#
-# B5の設定(10pt 40文字×35行) - 紙版
-texdocumentclass: ["review-jsbook", "media=print,paper=b5,serial_pagination=true,hiddenfolio=nikko-pc,openany,fontsize=10pt,baselineskip=15.4pt,line_length=40zw,number_of_lines=35,head_space=30mm,headsep=10mm,headheight=5mm,footskip=10mm"]
-# B5の設定(10pt 40文字×35行) - 電子版
-# texdocumentclass: ["review-jsbook", "media=ebook,paper=b5,serial_pagination=true,openany,fontsize=10pt,baselineskip=15.4pt,line_length=40zw,number_of_lines=35,head_space=30mm,headsep=10mm,headheight=5mm,footskip=10mm"]
-# A5の設定(9pt 38文字×37行) - 紙版
-# texdocumentclass: ["review-jsbook", "media=print,paper=a5,serial_pagination=true,hiddenfolio=nikko-pc,openany,fontsize=9pt,baselineskip=13pt,line_length=38zw,number_of_lines=37,head_space=15mm,headsep=3mm,headheight=5mm,footskip=10mm"]
-# A5の設定(9pt 38文字×37行) - 電子版
-# texdocumentclass: ["review-jsbook", "media=ebook,paper=a5,serial_pagination=true,openany,fontsize=9pt,baselineskip=13pt,line_length=38zw,number_of_lines=37,head_space=15mm,headsep=3mm,headheight=5mm,footskip=10mm"]
+# デフォルトは印刷用。電子配布版を作るには media=ebook とする
+texdocumentclass: ["review-jsbook", "media=print,paper=a5"]
 #
 # LaTeX用のコマンドを指定する
 # texcommand: "uplatex"
@@ -353,7 +342,7 @@ pdfmaker:
   # TeX版で利用する表紙画像。
   # 仕上がりサイズ+塗り足し3mmありのPDFまたはIllustratorファイル（PDF互換オプション付き）を推奨。
   # 拡縮はされず「そのまま」貼り付けられる
-  # coverimage: cover-a5.ai
+  coverimage: cover-a5.ai
   #
   # TeXコンパイル前に実行するプログラム。変換後のTeXソースを調整したいときに使用する。
   # 渡される引数1=作業用展開ディレクトリ、引数2=呼び出しを実行したディレクトリ
@@ -400,13 +389,3 @@ pdfmaker:
   # 奥付を作成するか。trueを指定するとデフォルトの奥付、ファイル名を指定するとそれがcolophon.htmlとしてコピーされる
   colophon: true
   # pdfmaker:階層を使うものはここまで
-
-# 以下のパラメータを有効にするときには、
-# webmaker:
-#    パラメータ: 値
-#    パラメータ: 値
-#   ...
-# という構成にする必要がある(インデントさせる)
-#
-webmaker:
-    stylesheet: ["style.css","style-web.css"]
