@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name rx631)(type Legacy)(uri /Users/kawasehiroaki/git/Let-s-start-microcomputer-in-hardmode/basic_circuit/LIB_R5F5631NDDFL#V0/R5F5631NDDFL#V0/KiCad/R5F5631NDDFL#V0.lib)(options "")(descr ""))
+  (lib (name as5047d)(type Legacy)(uri /Users/kawasehiroaki/git/Let-s-start-microcomputer-in-hardmode/basic_circuit/LIB_AS5047D-ATSM/AS5047D-ATSM/KiCad/AS5047D-ATSM.lib)(options "")(descr ""))
+  (lib (name USBserial)(type Legacy)(uri ${KIPRJMOD}/USBserial.lib)(options "")(descr ""))
+)

@@ -2,9 +2,13 @@ PREDEF:
   - preface.re
 
 CHAPS:
-  - article.re
-
+  - about_micro.re
+  - func.re
+  - preparation.re
+  - how_to_use.re
+  - finally.re
 APPENDIX:
-
+  - teraterm.re
+  - info.re
 POSTDEF:
   - contributors.re

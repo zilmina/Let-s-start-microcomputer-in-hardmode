@@ -1,0 +1,44 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L rx631:R5F5631NDDFL#V0 IC?
+U 1 1 5CB1EB0E
+P 4500 3350
+F 0 "IC?" H 6244 2796 50  0000 L CNN
+F 1 "R5F5631NDDFL#V0" H 6244 2705 50  0000 L CNN
+F 2 "QFP50P900X900X170-48N" H 6050 3850 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/1260948" H 6050 3750 50  0001 L CNN
+F 4 "MCU,RX631,100MHz,384KB Flash,LQFP48" H 6050 3650 50  0001 L CNN "Description"
+F 5 "1.7" H 6050 3550 50  0001 L CNN "Height"
+F 6 "1260948" H 6050 3450 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/1260948" H 6050 3350 50  0001 L CNN "RS Price/Stock"
+F 8 "Renesas Electronics" H 6050 3250 50  0001 L CNN "Manufacturer_Name"
+F 9 "R5F5631NDDFL#V0" H 6050 3150 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Resonator Y?
+U 1 1 5CB21A12
+P 3750 3900
+F 0 "Y?" V 3704 4010 50  0000 L CNN
+F 1 "Resonator" V 3795 4010 50  0000 L CNN
+F 2 "" H 3725 3900 50  0001 C CNN
+F 3 "~" H 3725 3900 50  0001 C CNN
+	1    3750 3900
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC

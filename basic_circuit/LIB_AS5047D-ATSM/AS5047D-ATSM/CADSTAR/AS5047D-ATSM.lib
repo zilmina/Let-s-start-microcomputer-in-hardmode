@@ -1,0 +1,16 @@
+.AS5047D-ATSM :1 ;ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V
+SOP65P640X120-14N
+*STM IC
+*NGS
+*PLB 1="CSN" 2="CLK" 3="MISO" 4="MOSI" 5="TEST" 6="B" 7="A" 8="W/PWM" 9="V" 10="U" 11="VDD" 12="VDD3V" 13="GND" 14="I/PWM"
+*MXP 14
+*DFN AS5047D-ATSM
+~!RS Part Number (1700756)
+~!Link RS Price/Stock (http://uk.rs-online.com/web/p/products/1700756)
+~!Manufacturer_Name (ams)
+~!Manufacturer_Part_Number (AS5047D-ATSM)
+~!Link Datasheet (http://uk.rs-online.com/web/p/products/1700756)
+~!Height (1.2mm)
+~!3D_Model (AS5047D-ATSM)
+AS5047D-ATSM
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 14.1!U 13.1!U 12.1!U 11.1!U 10.1!U 9.1!U 8.1!U 

@@ -1,0 +1,12 @@
+= 参考出典
+ * @<href>{http://micromouse-sagyoulog.blogspot.com}
+ * @<href>{http://ccwo.hatenablog.jp}
+ * @<href>{https://japan.renesasrulz.com/cafe_rene/f/forum5/4868/gunrx-cc-rx}
+ * @<href>{http://www.cc.kyoto-su.ac.jp/~kbys/kiso/cpu/cpu.html}
+ * @<href>{http://resource.renesas.com/lib/jpn/online_docs/um/RX/RX210_ja/?Address_Space#TOC_4_2}
+ * @<href>{https://www.weblio.jp/wkpja/content/バス+%28コンピュータ%29_コンピュータ内部のバス（外部バス）}
+ * @<href>{https://ednjapan.com/edn/articles/1503/25/news014.html}
+ * @<href>{https://qiita.com/zacky1972/items/ef4486e8a6d95edb68fd}
+ * @<href>{http://www.altima.jp/column/fpga_edison/xtal_match.html}
+ * @<href>{https://toshiba.semicon-storage.com/jp/design-support/e-learning/brushless_motor/chap3/1274512.html}
+ * @<href>{https://www.renesas.com/jp/ja/doc/products/mpumcu/doc/rx_family/r01uh0041jj0180_rx63n631.pdf?key=a22f85e669b92e5b1061673cd40f80cc}
